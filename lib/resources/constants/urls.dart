@@ -1,0 +1,3 @@
+abstract class GlobalUrls {
+  static const String homeIconPath = 'https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/273560713_235428385455132_8800796820888690763_n.jpg?_nc_cat=108&cb=99be929b-3346023f&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGZwGL2eT0Aqj4fDfVLkuWCd4ORMqRi4bF3g5EypGLhsWyH2dRarWxBCjR2iwu_AARbzzU5f-Af40wk6W_-rdTX&_nc_ohc=fUoXQRMZMlMAX9cHcAl&_nc_ht=scontent.fmnl17-1.fna&oh=00_AfArSrAqEkklloir9g_WXqNMUXisLxigGbjD38BH3UMg-Q&oe=648C3EC0';
+}
