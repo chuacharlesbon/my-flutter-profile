@@ -1,12 +1,19 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 import 'package:myflutterprofile/components/app_title_builder.dart';
 import 'package:myflutterprofile/presentations/home/home_screen.dart';
+import 'package:myflutterprofile/presentations/home/cubits/home_cubit.dart';
 import 'package:myflutterprofile/presentations/splash/splash_screen.dart';
 import 'package:myflutterprofile/resources/constants/colors.dart';
 import 'package:url_strategy/url_strategy.dart';
+
+final locator = GetIt.I;
+void setupLocator() {
+  locator.registerLazySingleton<HomeCubit>(() => HomeCubit());
+}
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,6 +21,7 @@ void main() {
   // Here we set the URL strategy for our web app.
   // This will remove /#/
   setPathUrlStrategy();
+  setupLocator();
   runApp(const MyApp());
 }
 
