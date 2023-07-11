@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 import 'package:myflutterprofile/components/app_title_builder.dart';
@@ -15,12 +16,16 @@ void setupLocator() {
   locator.registerLazySingleton<HomeCubit>(() => HomeCubit());
 }
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // Here we set the URL strategy for our web app.
   // This will remove /#/
   setPathUrlStrategy();
+
+  // Load .env
+  await dotenv.load(fileName: ".env");
+  
   setupLocator();
   runApp(const MyApp());
 }
