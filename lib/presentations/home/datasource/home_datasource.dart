@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:myflutterprofile/presentations/home/datasource/home_model.dart';
 
 class HomeDataSource {
   final Dio dio = Dio();
@@ -54,7 +55,9 @@ class HomeDataSource {
       // On Deployment, assigning value even on error to complete the process of API request (optional)
       result = null;
     }
-    return result;
+    
+    //return result;
+    return HomeModel.sampleResponse;
   }
 
   Future<List<dynamic>> getData2({

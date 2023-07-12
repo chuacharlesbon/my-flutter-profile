@@ -45,12 +45,20 @@ class _MyHomePageState extends State<MyHomePage> {
       body: BlocBuilder<HomeCubit, HomeState>(
           bloc: homeCubit,
           builder: (context, state) {
-            if (state.status != StateStatus.loaded) {
+            if (state.status == StateStatus.loading) {
               return const Center(
                 child: RepaintBoundary(
                   child: Padding(
                       padding: EdgeInsets.symmetric(vertical: 16),
                       child: CircularProgressIndicator.adaptive()),
+                ),
+              );
+            } else if (state.status == StateStatus.error) {
+              return const Center(
+                child: RepaintBoundary(
+                  child: Text(
+                    'Something went wrong',
+                  ),
                 ),
               );
             }
@@ -62,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     'My Profile',
                   ),
                   Text(
-                    state.itemA['message'] ?? "",
+                    state.itemA['sample'] ?? "",
                     style: Theme.of(context).textTheme.headlineMedium,
                   ),
                 ],
