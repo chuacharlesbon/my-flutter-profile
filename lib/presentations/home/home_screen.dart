@@ -28,6 +28,20 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void pageController(int index) {
+    if(index == 0){
+      context.go('/home');
+    }else if(index == 1){
+      context.go('/rules');
+    }else if(index == 1){
+      context.go('/book-now');
+    }else if(index == 1){
+      context.go('/profile');
+    }else if(index == 1){
+      context.go('/emergency');
+    }
+  }
+
   @override
   void initState() {
     super.initState();
@@ -81,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
         index: 0,
         configs: navbarConfigs,
         onTap: (index) {
-          //
+          pageController(index);
         },
       ),
       /* floatingActionButton: FloatingActionButton(

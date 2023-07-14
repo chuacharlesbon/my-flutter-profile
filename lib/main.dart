@@ -47,36 +47,6 @@ class _MyAppState extends State<MyApp> {
       title: 'My Profile',
       theme: ThemeData(
         primarySwatch: Colors.purple,
-        inputDecorationTheme: const InputDecorationTheme(
-          border: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: GlobalColors.primaryColor,
-              width: 1.5,
-            ),
-          ),
-          errorBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.red,
-              width: 1.5,
-            ),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: GlobalColors.primaryColor,
-              width: 1.5,
-            ),
-          ),
-          errorStyle: TextStyle(color: Colors.red),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: GlobalColors.primaryColor,
-              width: 1.5,
-            ),
-          ),
-          disabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.grey),
-          ),
-        ),
       ),
       routerConfig: _router,
     );
@@ -90,12 +60,9 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       routes: <GoRoute>[
-        /////////////////////////////////
-        /// Products
-        /////////////////////////////////
-        // path: /
         GoRoute(
           path: '/',
+          name: 'profile',
           pageBuilder: (context, state) => const MaterialPage(
             child: kIsWeb
               ? MyHomePage(title: 'My Profile')
@@ -104,11 +71,32 @@ class _MyAppState extends State<MyApp> {
         ),
         GoRoute(
           path: '/home',
+          name: 'home',
           pageBuilder: (context, state) => const MaterialPage(
             child: MyHomePage(title: 'My Profile'),
           ),
         ),
-        // path: /collections
+        GoRoute(
+          path: '/rules',
+          name: 'rules',
+          pageBuilder: (context, state) => const MaterialPage(
+            child: MyHomePage(title: 'My Profile'),
+          ),
+        ),
+        GoRoute(
+          path: '/book-now',
+          name: 'book-now',
+          pageBuilder: (context, state) => const MaterialPage(
+            child: MyHomePage(title: 'My Profile'),
+          ),
+        ),
+        GoRoute(
+          path: '/emergency',
+          name: 'emergency',
+          pageBuilder: (context, state) => const MaterialPage(
+            child: MyHomePage(title: 'My Profile'),
+          ),
+        ),
       ],
     ),
   ]);

@@ -207,8 +207,8 @@ final List<BottomNavBarConfigs> navbarConfigs = [
       Icons.map_outlined,
       color: Colors.red,
     ),
-    label: 'Trail',
-    routeName: '',
+    label: 'Home',
+    routeName: 'home',
   ),
   const BottomNavBarConfigs(
     icon: Image(
@@ -217,7 +217,7 @@ final List<BottomNavBarConfigs> navbarConfigs = [
       width: 24,
     ),
     label: 'Rules',
-    routeName: '',
+    routeName: 'rules',
   ),
   const BottomNavBarConfigs(
     icon: Image(
@@ -227,7 +227,7 @@ final List<BottomNavBarConfigs> navbarConfigs = [
       color: Colors.red,
     ),
     label: 'Book Now',
-    routeName: '',
+    routeName: 'book-now',
   ),
   const BottomNavBarConfigs(
     icon: Image(
@@ -236,7 +236,7 @@ final List<BottomNavBarConfigs> navbarConfigs = [
       width: 24,
     ),
     label: 'Profile',
-    routeName: '',
+    routeName: 'profile',
   ),
   const BottomNavBarConfigs(
     icon: Image(
@@ -246,6 +246,6 @@ final List<BottomNavBarConfigs> navbarConfigs = [
       color: Colors.red,
     ),
     label: 'Emergency',
-    routeName: '',
+    routeName: 'emergency',
   ),
 ];
