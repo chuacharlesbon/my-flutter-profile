@@ -5,6 +5,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 import 'package:myflutterprofile/components/app_title_builder.dart';
+import 'package:myflutterprofile/presentations/about/presentation/rules_screen.dart';
 import 'package:myflutterprofile/presentations/home/home_screen.dart';
 import 'package:myflutterprofile/presentations/home/cubits/home_cubit.dart';
 import 'package:myflutterprofile/presentations/splash/splash_screen.dart';
@@ -80,7 +81,7 @@ class _MyAppState extends State<MyApp> {
           path: '/rules',
           name: 'rules',
           pageBuilder: (context, state) => const MaterialPage(
-            child: MyHomePage(title: 'My Profile'),
+            child: RulesPage(title: 'Sample Rules Page'),
           ),
         ),
         GoRoute(
